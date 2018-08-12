@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5037A90521201A4C00090374 /* ResCellDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037A90421201A4C00090374 /* ResCellDetailsController.swift */; };
 		50D8584A211AC06800AC0CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D85849211AC06800AC0CD0 /* AppDelegate.swift */; };
-		50D8584C211AC06800AC0CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D8584B211AC06800AC0CD0 /* ViewController.swift */; };
 		50D8584F211AC06800AC0CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D8584D211AC06800AC0CD0 /* Main.storyboard */; };
 		50D85851211AC06900AC0CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D85850211AC06900AC0CD0 /* Assets.xcassets */; };
 		50D85854211AC06900AC0CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D85852211AC06900AC0CD0 /* LaunchScreen.storyboard */; };
+		50D8585C211AC0F400AC0CD0 /* ResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D8585B211AC0F400AC0CD0 /* ResTableViewController.swift */; };
+		50D8585E211AC42500AC0CD0 /* ResTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D8585D211AC42400AC0CD0 /* ResTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5037A90421201A4C00090374 /* ResCellDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCellDetailsController.swift; sourceTree = "<group>"; };
 		50D85846211AC06800AC0CD0 /* practice-tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "practice-tableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D85849211AC06800AC0CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50D8584B211AC06800AC0CD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50D8584E211AC06800AC0CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D85850211AC06900AC0CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50D85853211AC06900AC0CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50D85855211AC06900AC0CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D8585B211AC0F400AC0CD0 /* ResTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResTableViewController.swift; sourceTree = "<group>"; };
+		50D8585D211AC42400AC0CD0 /* ResTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,10 @@
 		50D85848211AC06800AC0CD0 /* practice-tableView */ = {
 			isa = PBXGroup;
 			children = (
+				50D8585B211AC0F400AC0CD0 /* ResTableViewController.swift */,
+				5037A90421201A4C00090374 /* ResCellDetailsController.swift */,
+				50D8585D211AC42400AC0CD0 /* ResTableCell.swift */,
 				50D85849211AC06800AC0CD0 /* AppDelegate.swift */,
-				50D8584B211AC06800AC0CD0 /* ViewController.swift */,
 				50D8584D211AC06800AC0CD0 /* Main.storyboard */,
 				50D85850211AC06900AC0CD0 /* Assets.xcassets */,
 				50D85852211AC06900AC0CD0 /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50D8584C211AC06800AC0CD0 /* ViewController.swift in Sources */,
+				5037A90521201A4C00090374 /* ResCellDetailsController.swift in Sources */,
+				50D8585C211AC0F400AC0CD0 /* ResTableViewController.swift in Sources */,
 				50D8584A211AC06800AC0CD0 /* AppDelegate.swift in Sources */,
+				50D8585E211AC42500AC0CD0 /* ResTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
