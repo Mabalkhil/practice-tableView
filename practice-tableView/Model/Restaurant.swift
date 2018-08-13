@@ -1,31 +1,33 @@
 //
 //  Restaurant.swift
-//  practice-tableView
+//  FoodPin
 //
-//  Created by Mohammed Abalkhail on 8/12/18.
-//  Copyright © 2018 Mohammed Abalkhail. All rights reserved.
+//  Created by Simon Ng on 1/9/2017.
+//  Copyright © 2017 AppCoda. All rights reserved.
 //
 
 import Foundation
 
-
 class Restaurant {
-    var resName : String
-    var resType : String
-    var reslocation : String
-    var resVisited : Bool
-    var resimage : String     
-    init(resName : String , resType : String , reslocation : String ,resVisited : Bool,resimage : String) {
-        self.resName = resName
-        self.resType = resType
-        self.reslocation = reslocation
-        self.resVisited = resVisited
-        self.resimage = resimage
+    var name: String
+    var type: String
+    var location: String
+    var phone: String
+    var description: String
+    var image: String
+    var isVisited: Bool
+    
+    init(name: String, type: String, location: String, phone: String, description: String, image: String, isVisited: Bool) {
+        self.name = name
+        self.type = type
+        self.location = location
+        self.phone = phone
+        self.description = description
+        self.image = image
+        self.isVisited = isVisited
     }
-    convenience init(){
-        self.init(resName: "", resType: "", reslocation: "", resVisited: false, resimage: "")
+    
+    convenience init() {
+        self.init(name: "", type: "", location: "", phone: "", description: "", image: "", isVisited: false)
     }
-    
-    
-    
 }
