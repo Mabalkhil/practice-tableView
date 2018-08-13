@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500083732120BCD5004C1B9D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500083722120BCD5004C1B9D /* Restaurant.swift */; };
 		5037A90521201A4C00090374 /* ResCellDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037A90421201A4C00090374 /* ResCellDetailsController.swift */; };
 		50D8584A211AC06800AC0CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D85849211AC06800AC0CD0 /* AppDelegate.swift */; };
 		50D8584F211AC06800AC0CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D8584D211AC06800AC0CD0 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500083722120BCD5004C1B9D /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		5037A90421201A4C00090374 /* ResCellDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResCellDetailsController.swift; sourceTree = "<group>"; };
 		50D85846211AC06800AC0CD0 /* practice-tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "practice-tableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D85849211AC06800AC0CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5000837421214D9F004C1B9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				500083722120BCD5004C1B9D /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5000837521214DA6004C1B9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50D8585D211AC42400AC0CD0 /* ResTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5000837621214DAC004C1B9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50D8585B211AC0F400AC0CD0 /* ResTableViewController.swift */,
+				5037A90421201A4C00090374 /* ResCellDetailsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5000837721214E5B004C1B9D /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				50D8584D211AC06800AC0CD0 /* Main.storyboard */,
+				50D85852211AC06900AC0CD0 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		50D8583D211AC06800AC0CD0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +94,12 @@
 		50D85848211AC06800AC0CD0 /* practice-tableView */ = {
 			isa = PBXGroup;
 			children = (
-				50D8585B211AC0F400AC0CD0 /* ResTableViewController.swift */,
-				5037A90421201A4C00090374 /* ResCellDetailsController.swift */,
-				50D8585D211AC42400AC0CD0 /* ResTableCell.swift */,
+				5000837721214E5B004C1B9D /* storyboard */,
+				5000837621214DAC004C1B9D /* Controller */,
+				5000837521214DA6004C1B9D /* View */,
+				5000837421214D9F004C1B9D /* Model */,
 				50D85849211AC06800AC0CD0 /* AppDelegate.swift */,
-				50D8584D211AC06800AC0CD0 /* Main.storyboard */,
 				50D85850211AC06900AC0CD0 /* Assets.xcassets */,
-				50D85852211AC06900AC0CD0 /* LaunchScreen.storyboard */,
 				50D85855211AC06900AC0CD0 /* Info.plist */,
 			);
 			path = "practice-tableView";
@@ -141,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500083732120BCD5004C1B9D /* Restaurant.swift in Sources */,
 				5037A90521201A4C00090374 /* ResCellDetailsController.swift in Sources */,
 				50D8585C211AC0F400AC0CD0 /* ResTableViewController.swift in Sources */,
 				50D8584A211AC06800AC0CD0 /* AppDelegate.swift in Sources */,

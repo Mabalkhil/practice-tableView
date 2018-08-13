@@ -12,13 +12,31 @@ class ResTableViewController: UITableViewController {
     var resIsVisited = Array(repeating: false, count: 21)
     var checkIn : Bool = false
 
-    var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
-    
-    var restaurantImage = ["barrafina","bourkestreetbakery","cafedeadend","cafeloisl","cafelore","caskpubkitchen","confessional","donostia","fiveleaves","forkeerestaurant","grahamavenuemeats","haighschocolate","homei","palominoespresso","petiteoyster","posatelier","royaloak","teakha","traif","upstate","wafflewolf"]
-    
-    var restaurantLocation = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
-    
-    var restaurantType = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    // complete
+    var restaurants:[Restaurant] = [
+Restaurant(resName: "Cafe Deadend", resType: "Coffee & Tea Shop", reslocation: "Hong Kong", resVisited: false, resimage: "barrafina"),
+Restaurant(resName: "Homei", resType: "Cafe", reslocation: "Hong Kong", resVisited: false, resimage: "bourkestreetbakery"),
+Restaurant(resName: "Teakha", resType: "Tea House", reslocation: "Hong Kong", resVisited: false, resimage: "cafedeadend"),
+Restaurant(resName: "Cafe Loisl", resType: "Austrian / Causual Drink", reslocation: "Hong Kong", resVisited: false, resimage: "cafeloisl"),
+Restaurant(resName: "Petite Oyster", resType: "French", reslocation: "Hong Kong", resVisited: false, resimage: "cafelore"),
+Restaurant(resName: "For Kee Restaurant", resType: "Bakery", reslocation: "Sydney", resVisited: false, resimage: "caskpubkitchen"),
+Restaurant(resName: "Po's Atelier", resType: "Bakery", reslocation: "Sydney", resVisited: false, resimage: "confessional"),
+Restaurant(resName: "Bourke Street Bakery", resType: "Chocolate", reslocation: "Sydney", resVisited: false, resimage: "donostia"),
+Restaurant(resName: "Haigh's Chocolate", resType: "Cafe", reslocation: "New York", resVisited: false, resimage: "fiveleaves"),
+Restaurant(resName: "Palomino Espresso", resType: "American / Seafood", reslocation: "Riyadh", resVisited: false, resimage: "forkeerestaurant"),
+Restaurant(resName: "Upstate", resType: "American", reslocation: "New York", resVisited: false, resimage: "grahamavenuemeats"),
+Restaurant(resName: "Traif", resType: "American", reslocation: "New York", resVisited: false, resimage: "haighschocolate"),
+Restaurant(resName: "Graham Avenue Meats", resType: "Breakfast & Brunch", reslocation: "Riyadh", resVisited: false, resimage: "homei"),
+Restaurant(resName: "Waffle & Wolf", resType: "Coffee & Tea", reslocation: "New York", resVisited: false, resimage: "palominoespresso"),
+Restaurant(resName: "Five Leaves", resType: "Coffee & Tea", reslocation: "New York", resVisited: false, resimage: "petiteoyster"),
+Restaurant(resName: "Cafe Lore", resType: "Latin American", reslocation: "New York", resVisited: false, resimage: "posatelier"),
+Restaurant(resName: "Confessional", resType: "Spanish", reslocation: "New York", resVisited: false, resimage: "royaloak"),
+Restaurant(resName: "Barrafina", resType: "Spanish", reslocation: "London", resVisited: false, resimage: "teakha"),
+Restaurant(resName: "Donostia", resType: "Spanish", reslocation: "London", resVisited: false, resimage: "traif"),
+Restaurant(resName: "Royal Oak", resType: "British", reslocation: "London", resVisited: false, resimage: "upstate"),
+Restaurant(resName: "CASK Pub and Kitchen", resType: "Thai", reslocation: "London", resVisited: false, resimage: "wafflewolf")]
+
+
     
     
     
@@ -43,17 +61,17 @@ class ResTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurantImage.count
+        return restaurants.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ResTableCell
 
-        cell.imageV.image = UIImage(named: restaurantImage[indexPath.row])
-        cell.nameL.text = restaurantNames[indexPath.row]
-        cell.typeL.text = restaurantType[indexPath.row]
-        cell.locationL.text = restaurantLocation[indexPath.row]
+        cell.imageV.image = UIImage(named: restaurants[indexPath.row].resimage)
+        cell.nameL.text = restaurants[indexPath.row].resName
+        cell.typeL.text = restaurants[indexPath.row].resType
+        cell.locationL.text = restaurants[indexPath.row].reslocation
         
         
     
@@ -131,11 +149,8 @@ class ResTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: {(action,sourceView,completionHandler) in
             // remove the row data from the model(array)
-            self.restaurantNames.remove(at: indexPath.row)
-            self.resIsVisited.remove(at: indexPath.row)
-            self.restaurantLocation.remove(at: indexPath.row)
-            self.restaurantImage.remove(at: indexPath.row)
-            self.restaurantType.remove(at: indexPath.row)
+            self.restaurants.remove(at: indexPath.row)
+            
             // for row eeletion
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             
@@ -144,11 +159,11 @@ class ResTableViewController: UITableViewController {
             
         })
         let shareAction = UIContextualAction(style: .normal, title: "Share", handler: {(action,sourceView,completionHandler) in
-            let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            let defaultText = "Just checking in at " + self.restaurants[indexPath.row].resName
             let activityController : UIActivityViewController
         
             // because UIImage return an optional image type sp we have to unwarp
-            if let image = UIImage(named: self.restaurantImage[indexPath.row]) {
+            if let image = UIImage(named: self.restaurants[indexPath.row].resimage) {
                 print(type(of: image))
              activityController = UIActivityViewController(activityItems: [defaultText,image], applicationActivities: nil)
                 }else{
@@ -210,10 +225,8 @@ class ResTableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
          let destination = segue.destination as! ResCellDetailsController
         // dont assign value directly because the destinition view visual component not created yet
-            destination.resImageName = restaurantImage[indexPath.row]
-            destination.resName = restaurantNames[indexPath.row]
-            destination.resType = restaurantType[indexPath.row]
-            destination.reslocationt = restaurantLocation[indexPath.row]
+            destination.restaurant = restaurants[indexPath.row]
+            
         }
     }
 }

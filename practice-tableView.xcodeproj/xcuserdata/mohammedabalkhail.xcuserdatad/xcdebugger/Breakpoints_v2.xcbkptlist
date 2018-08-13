@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "practice-tableView/ResTableViewController.swift"
-            timestampString = "555763218.463932"
+            timestampString = "555830505.6957771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "practice-tableView/ResTableViewController.swift"
-            timestampString = "555763218.464397"
+            timestampString = "555830505.696207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

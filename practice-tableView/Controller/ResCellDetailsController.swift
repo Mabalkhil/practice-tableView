@@ -14,16 +14,13 @@ class ResCellDetailsController: UIViewController {
     @IBOutlet weak var resTypeL: UILabel!
     @IBOutlet weak var reslocation: UILabel!
     @IBOutlet weak var resImageView: UIImageView!
-    var resImageName :String = ""
-    var resType :String = ""
-    var reslocationt :String = ""
-    var resName :String = ""
+    var restaurant: Restaurant = Restaurant()
     override func viewDidLoad() {
         super.viewDidLoad()
-        resImageView.image = UIImage(named: resImageName)
-        resNameL.text = resName
-        resTypeL.text = resType
-        reslocation.text = reslocationt
+        resImageView.image = UIImage(named: restaurant.resimage)
+        resNameL.text = restaurant.resName
+        resTypeL.text = restaurant.resType
+        reslocation.text = restaurant.reslocation
         // shrinking the navegation bar 
         navigationItem.largeTitleDisplayMode = .never
     }
