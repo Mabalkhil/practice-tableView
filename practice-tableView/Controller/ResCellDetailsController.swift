@@ -24,6 +24,9 @@ class ResCellDetailsController: UIViewController , UITableViewDelegate ,UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // switch statment to control the flow of the cells
+        // the fist two cells is of type ResDetailIconTextCell the third one is ResDetailTextCell
         switch  indexPath.row {
         
         case 0:
@@ -39,7 +42,7 @@ class ResCellDetailsController: UIViewController , UITableViewDelegate ,UITableV
             return cell
         
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ResDetailIconTextCell.self), for: indexPath) as! ResDetailTextCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ResDetailTextCell.self), for: indexPath) as! ResDetailTextCell
             cell.descriptionLabel.text = restaurant.description
             return cell
         
@@ -51,7 +54,7 @@ class ResCellDetailsController: UIViewController , UITableViewDelegate ,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        tableView.dataSource = self 
+        tableView.dataSource = self
         // shrinking the navegation bar 
         navigationItem.largeTitleDisplayMode = .never
         // updating the view 

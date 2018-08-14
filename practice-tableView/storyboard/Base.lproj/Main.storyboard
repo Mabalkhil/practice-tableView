@@ -244,8 +244,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="phoneImage" destination="aD8-w5-qnu" id="vwd-GA-cmP"/>
-                                            <outlet property="phoneNumber" destination="kbJ-ai-1x1" id="4pM-Ub-ZQc"/>
+                                            <outlet property="imageIcon" destination="aD8-w5-qnu" id="R1D-rU-M4V"/>
+                                            <outlet property="textL" destination="kbJ-ai-1x1" id="gTa-uh-BLi"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResDetailTextCell" id="G1M-ds-h80" customClass="ResDetailTextCell" customModule="practice_tableView" customModuleProvider="target">
